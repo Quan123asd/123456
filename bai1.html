@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bài 1</h1>
+    <h2>Món ăn hôm nay là</h2>
+    <p id="hello"></p>
+    <h2>Những món ăn mới nhất là :</h2>
+    <p id="news"></p>
+</body>
+<script>
+
+    let hello = "";
+    let menu = ["Thịt", "Rau", "Gà"];
+    userInput = prompt("Hãy nhập các kí tự  C,R,U,D");
+    if (userInput === "C") {
+        monanC = prompt("Hãy nhập thêm món ăn vào trong menu");
+        menu.push(monanC);
+        for (let i = 0; i < menu.length; i++) {
+        hello = hello + menu[i] + "<br>";
+    }    document.getElementById("hello").innerHTML = hello;
+
+    }
+    
+
+
+
+
+    let news = "";
+    if (userInput === "R") {
+        news = menu.join(",");
+    }
+    document.getElementById("news").innerHTML = news;
+
+
+
+
+let uwu="";
+    if (userInput === "U") {
+        update = prompt("Hiện tại menu đang là [Thịt, Rau, Gà], bạn muốn thay đổi vị trí nào?");
+    }
+    if (update === "Thịt") {
+        uwu = menu.indexOf(update);
+        upda = prompt("Bạn muốn đổi thành món ăn gì");
+        menu[uwu] = upda;
+        for (let i = 0; i < menu.length; i++) {
+        hello = hello + menu[i] + "<br>";
+    }    document.getElementById("hello").innerHTML = hello;
+
+    }
+    if (update === "Rau") {
+        uwu = menu.indexOf(update);
+        upda = prompt("Bạn muốn đổi thành món ăn gì");
+        menu[uwu] = upda;
+        for (let i = 0; i < menu.length; i++) {
+        hello = hello + menu[i] + "<br>";
+    }    document.getElementById("hello").innerHTML = hello;
+
+    }
+    if (update === "Gà") {
+        uwu = menu.indexOf(update);
+        upda = prompt("Bạn muốn đổi thành món ăn gì");
+        menu[uwu] = upda;
+        for (let i = 0; i < menu.length; i++) {
+        hello = hello + menu[i] + "<br>";
+    }    document.getElementById("hello").innerHTML = hello;
+
+    }
+    
+
+
+    let uwu2="";
+
+    if (userInput === "D") {
+        update2 = prompt("Hiện tại menu đang là [Thịt, Rau, Gà], bạn muốn xoá món ăn nào?");
+    }
+    if (update2 === "Thịt") {
+       let uwu2 = menu.indexOf(update2);
+        menu.splice(uwu2);
+        for (let i = 0; i < menu.length; i++) {
+        hello = hello + menu[i] + "<br>";
+    }    document.getElementById("hello").innerHTML = hello;
+
+    }
+
+
+
+
+</script>
+
+</html>
